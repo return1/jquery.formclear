@@ -1,7 +1,7 @@
  jQuery.formclear
 =================
 prefill for input fields
-http://github.com/return1/jquery.formclear
+[http://github.com/return1/jquery.formclear][0]
 
 Description and Usage
 ---------------------
@@ -30,7 +30,7 @@ Changelog
 ---------
 
 * 1.1 - use focus instead of click, use title tag for prefill, minor code cleanup, only set helper txt on emtpyval fields
-* 1.0 - initial by Jonathan Yarbor @ http://plugins.jquery.com/project/FormClear
+* 1.0 - initial by Jonathan Yarbor @ [http://plugins.jquery.com/project/FormClear][1]
 
 
 License
@@ -58,3 +58,6 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+[0]: http://github.com/return1/jquery.formclear "jQuery.formclear"
+[1]: http://plugins.jquery.com/project/FormClear "original plugin"
