@@ -29,6 +29,7 @@ Customizing:
 Changelog
 ---------
 
+* 1.2 - multiple input fields with formclear did not work correctly
 * 1.1 - use focus instead of click, use title tag for prefill, minor code cleanup, only set helper txt on emtpyval fields
 * 1.0 - initial by Jonathan Yarbor @ [http://plugins.jquery.com/project/FormClear][1]
 

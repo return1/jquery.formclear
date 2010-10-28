@@ -1,7 +1,7 @@
 /**
 * jQuery.formclear - prefill for input fields
 *
-* version 1.1
+* version 1.2
 *
 * http://return1.at/
 * http://github.com/return1/jquery.formclear
@@ -24,34 +24,30 @@
                 emptyval: "",
                 fetchattr: 'title'
             },
-            $obj,
-            allowedtext,
-            normalval;
+            allowedtext;
 
         opts = $.extend({}, defaults, opts);
 
         return this.each(function () {
-            $obj = $(this);
-            allowedtext = $obj.is(':text') || $obj.is(':password') || $obj.is('textarea');
+            allowedtext = $(this).is(':text') || $(this).is(':password') || $(this).is('textarea');
 
             if (allowedtext) {
-                normalval = $obj.attr(opts.fetchattr);
-                if ($obj.val() === opts.emptyval) {
-                    $obj.val(normalval);
-                    $obj.css('color', opts.inactivecolor);
+                if ($(this).val() === opts.emptyval) {
+                    $(this).val($(this).attr(opts.fetchattr));
+                    $(this).css('color', opts.inactivecolor);
                 }
 
-                $obj.bind('focus', function () {
-                    if ($obj.val() === normalval) {
-                        $obj.val(opts.emptyval);
-                        $obj.css('color', opts.activecolor);
+                $(this).bind('focus', function () {
+                    if ($(this).val() === $(this).attr(opts.fetchattr)) {
+                        $(this).val(opts.emptyval);
+                        $(this).css('color', opts.activecolor);
                     }
                 });
 
-                $obj.bind('blur', function () {
-                    if ($obj.val() === opts.emptyval || !$.trim($obj.val()).length) {
-                        $obj.val(normalval);
-                        $obj.css('color', opts.inactivecolor);
+                $(this).bind('blur', function () {
+                    if ($(this).val() === opts.emptyval || !$.trim($(this).val()).length) {
+                        $(this).val($(this).attr(opts.fetchattr));
+                        $(this).css('color', opts.inactivecolor);
                     }
                 });
             }
